@@ -12,7 +12,13 @@ except URLError:
     print("Server down or incorrect domain")
 else:
     res = BeautifulSoup(html.read(),"html.parser")
+    tags = res.findAll("h2", {"class": "H-titulo"})
+    tags1 = res.findAll("div", {"class": "H-preco"})
     if res.title is None:
         print("Tag not found")
     else:
         print(res.title)
+    for tag in tags:
+      print(tag.getText())
+    for tag in tags1:
+      print(tag.getText())
