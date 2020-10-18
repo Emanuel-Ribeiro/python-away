@@ -8,12 +8,12 @@ try:
 except HTTPError as e:
     print(e)
 except URLError:
-    print("Server down or incorrect domain")
+    print("Servidor fora do ar ou dominio incorreto")
 else:
     res = BeautifulSoup(html.read(),"html.parser")
     tags = res.findAll("h2", {"class": "H-titulo"})+res.findAll("div", {"class": "H-preco"})
     if res.title is None:
-        print("Tag not found")
+        print("Tag nao encontrada")
     else:
         print(res.title)
     for tag in tags:
