@@ -14,4 +14,4 @@ def set_browser_as_incognito(options):
     options.add_argument('--incognito')
 
 def set_automation_as_head_less(options):
-    options.add_argument('--headless')
+    options.add_argument('--headless') 

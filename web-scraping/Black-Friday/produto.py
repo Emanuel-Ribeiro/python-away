@@ -12,7 +12,7 @@ class Produto:
             "preco_anterior" : self.preco_anterior,
             "link" : self.link
         }
-    
+     
     def from_json(self, json_):
         self.nome = json_["nome"]
         self.preco = json_["preco"]

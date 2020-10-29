@@ -62,7 +62,7 @@ while True:
                     Exception()
                     preco_anterior = preco
             except:
-                print("exception")
+                print("exception") 
                 should_add = False
             produto = Produto(nome, preco, preco_anterior, link)
             if should_add:

@@ -8,4 +8,5 @@ def convert_price_toNumber(price):
         price = price.split(",")[0] + price.split(",")[1]
     except:
         Exception()
-    return float(price)
+    return float(price) 
+    
