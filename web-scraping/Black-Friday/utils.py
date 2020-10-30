@@ -1,12 +1,12 @@
-def convert_price_toNumber(price):
-    price = price.split("$")[1]
+def convert_price_toNumber(preco):
+    preco = preco.split("$")[1]
     try:
-        price = price.split("\n")[0] + "." + price.split("\n")[1]
+        preco = preco.split("\n")[0] + "." + preco.split("\n")[1]
     except:
         Exception()
     try:
-        price = price.split(",")[0] + price.split(",")[1]
+        preco = preco.split(",")[0] + preco.split(",")[1]
     except:
         Exception()
-    return float(price) 
+    return float(preco) 
     

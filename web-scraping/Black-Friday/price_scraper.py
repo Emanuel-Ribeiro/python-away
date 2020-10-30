@@ -11,7 +11,7 @@ from web_driver_conf import set_ignore_certificate_error
 from web_driver_conf import set_browser_as_incognito
 from web_driver_conf import set_automation_as_head_less
 
-URL = "https://www.kabum.com.br/"
+URL = "http://www.amazon.com/"
 NUMERO_DE_PAGINAS_BUSCADAS = 10
 PERGUNTA_PRODUTO = "Qual produto você proucura?\n:"
 proucura_termo = str(input(PERGUNTA_PRODUTO))
@@ -82,13 +82,13 @@ for produto in produtos:
             not_right = True
     if not not_right:
         if run == 0:
-            menor_preco = produto.price
+            menor_preco = produto.preco
             produto_mais_barato = produto
             run = 1
-        elif produto.price < menor_preco:
-            menor_preco = produto.price
+        elif produto.preco < menor_preco:
+            menor_preco = produto.preco
             produto_mais_barato = produto
-        discount = produto.prev_price - produto.price
+        discount = produto.prev_preco - produto.preco
         if discount > maior_desconto:
             maior_desconto = discount
             melhor_custo_beneficio = produto
