@@ -11,9 +11,9 @@ from web_driver_conf import set_ignore_certificate_error
 from web_driver_conf import set_browser_as_incognito
 from web_driver_conf import set_automation_as_head_less
 
-URL = "http://www.amazon.com/"
+URL = "https://www.amazon.co.uk/blackfriday?ref_=nav_cs_td_bfc_dt_cr"
 NUMERO_DE_PAGINAS_BUSCADAS = 10
-PERGUNTA_PRODUTO = "Qual produto você proucura?\n:"
+PERGUNTA_PRODUTO = "Qual produto você procura?\n:"
 proucura_termo = str(input(PERGUNTA_PRODUTO))
 
 maior_desconto = 0.0
@@ -78,7 +78,7 @@ run = 0
 for produto in produtos:
     not_right = False
     for word in proucura_termos:
-        if word.lower() not in produto.name.lower():
+        if word.lower() not in produto.nome.lower():
             not_right = True
     if not not_right:
         if run == 0:
