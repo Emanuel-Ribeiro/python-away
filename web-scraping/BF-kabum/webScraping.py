@@ -43,12 +43,12 @@ produtos = []
 
 time.sleep(1)
 
-nome = elemento.find_element_by_xpath("//div[@class='produto-nome']").text
-preco = elemento.find_element_by_xpath("//span[@class='produto-avista']").text
-preco_anterior = elemento.find_element_by_xpath("//span[@class='produto-aprazo']//s").text
+continua = 1
 
-print(f"{nome}\nCusta: {preco}\nCustava: {preco_anterior}")
-
-time.sleep(10)
-
+for i in range(20): #trocar por um for que saiba onde parar(ainda nao faço ideia como)
+  nome = elemento.find_elements_by_xpath("//div[@class='produto-nome']")[i].text
+  preco = elemento.find_elements_by_xpath("//span[@class='produto-avista']")[i].text
+  preco_anterior = elemento.find_elements_by_xpath("//span[@class='produto-aprazo']//s")[i].text
+  print(f"{nome}\nCusta: {preco}\nCustava: {preco_anterior}")
+  # Resolver o problema de retornar somente 3 produtos (Tambem nao faço ideia como)
 driver.quit()
