@@ -10,4 +10,4 @@ while True:
     pyautogui.typewrite(palavra)
     time.sleep(2)
     pyautogui.press("enter")
-    time.sleep(7260)  #executar a cada 2hrs e 1 minuto
+  time.sleep(7260)  #executar a cada 2hrs e 1 minuto
